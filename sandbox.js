@@ -1,30 +1,31 @@
-var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
-    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
-        if (ar || !(i in from)) {
-            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
-            ar[i] = from[i];
-        }
-    }
-    return to.concat(ar || Array.prototype.slice.call(from));
-};
+// explicit types
+var character;
+var age;
+var isLoggedIn;
+// *! character = false
+character = "luigi";
+// *! age = "luigi"
+age = 30;
+// *! isLoggedIn = 25
+isLoggedIn = true || false;
 // arrays
-var names = ["luigi", "mario", "yoshi"];
-names.push("toad");
-console.log(names);
-var numbers = [10, 20, 30, 40];
-numbers.push(203);
-console.log(numbers);
-var mixed = __spreadArray(__spreadArray(__spreadArray([], names, true), numbers, true), [true], false);
-console.log(mixed);
+var ninjas = [];
+ninjas.push("shaun");
+// union types
+var mixed = [];
+mixed.push("hello", 20, false, { name: "hello" });
+// console.log(mixed)
+var uid;
+// *! uid = false
+uid = 123;
+uid = "234";
 // objects
-var ninja = {
-    name: "maio",
-    belt: "black",
-    age: 30
-};
-ninja = {
-    name: "maio",
+var ninjaOne;
+ninjaOne = { name: "yoshi", age: 30 };
+var ninjaTwo;
+ninjaTwo = {
+    beltColour: "black",
     age: 30,
-    belt: "gggg"
+    name: "rahmon"
 };
-console.log(ninja);
+// console.log(ninjaTwo)
