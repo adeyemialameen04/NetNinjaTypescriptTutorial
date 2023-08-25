@@ -1,19 +1,13 @@
-let greet: Function
-
-greet = () => {
-    console.log("hello")
+type StringOrNum = string | number
+type objWithName = {
+    name: string,
+    uid: StringOrNum
 }
 
-const add = (a: number, b: number, c: number | string = 10) => {
-    console.log(a + b)
-    console.log(c)
+const logDetails = (uid: StringOrNum, item: string) => {
+    console.log(`${item} has a uid of ${uid}`)
 }
 
-add(3, 89)
-
-const minus = (a: number, b: number) => {
-    return a - b
+const greet = (user: objWithName) => {
+    console.log(`${user.name} says hello`)
 }
-
-const result = minus(10, 70)
-console.log(result)
