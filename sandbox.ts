@@ -1,13 +1,27 @@
-let character = "mario"
-let age = 30
-let isBlackBelt = false
+// arrays
+let names = ["luigi", "mario", "yoshi"]
 
-character = "luigi"
+names.push("toad")
+console.log(names)
 
+let numbers = [10, 20, 30, 40]
+numbers.push(203)
+console.log(numbers)
 
+let mixed = [...names, ...numbers, true]
+console.log(mixed)
 
-const circ = (diameter: number) => {
-    return diameter * Math.PI
+// objects
+let ninja = {
+    name: "maio",
+    belt: "black",
+    age: 30
 }
 
-console.log(circ(7.5))
+ninja = {
+    name: "maio",
+    age: 30,
+    belt: "gggg"
+}
+
+console.log(ninja)
